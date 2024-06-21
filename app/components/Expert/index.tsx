@@ -1,9 +1,10 @@
 "use client";
 import Slider from "react-slick";
 import React, { Component } from "react";
-import Image from "next/image";
+ 
 import { Fade } from "react-awesome-reveal";
 import 'slick-carousel/slick/slick.css';
+import Image, { StaticImageData } from "next/image";
 import 'slick-carousel/slick/slick-theme.css';
 import image1 from "../../Assets/png-home-1.png";
 import image2 from "../../Assets/png-home-1.png";
@@ -17,7 +18,7 @@ import image5 from "../../Assets/png-home-1.png";
 interface DataType {
     profession: string;
     name: string;
-    imgSrc:string  // Use StaticImageData for image sources
+    imgSrc: StaticImageData  // Use StaticImageData for image sources
 }
 
 const postData: DataType[] = [
