@@ -18,7 +18,7 @@ export default function Home() {
       <Cook />
       <Expert />
       <Gallery />
-      <Newsletter />
+      {/* <Newsletter /> */}
       </main>
       
   )
