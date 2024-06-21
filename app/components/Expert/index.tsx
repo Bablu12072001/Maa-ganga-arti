@@ -17,7 +17,7 @@ import image5 from "../../Assets/png-home-1.png";
 interface DataType {
     profession: string;
     name: string;
-    imgSrc: StaticImageData; // Use StaticImageData for image sources
+    imgSrc:string  // Use StaticImageData for image sources
 }
 
 const postData: DataType[] = [
