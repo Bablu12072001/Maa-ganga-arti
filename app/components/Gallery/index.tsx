@@ -2,6 +2,7 @@
 "use client";
 import Image from 'next/image';
 import { Fade } from "react-awesome-reveal";
+import { Button } from '@mui/material';
  
 import { useRouter } from 'next/navigation';
 import image1 from "../../Assets/pujaevent.jpg"
@@ -59,11 +60,20 @@ const Gallery = () => {
                 </div>
 
                 <div className="text-center mt-8">
-                    <button
+                    
+                    <Button
                         onClick={handleViewMore}
-                        className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-black bg-indigo-500 hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        View More
-                    </button>
+                                                type="submit"
+                                                variant="contained"
+                                                sx={{
+                                                    backgroundColor: 'green !important',
+                                                    '&:hover': {
+                                                        backgroundColor: 'darkgreen !important'
+                                                    }
+                                                }}
+                                            >
+                                                 View More
+                                            </Button>
                 </div>
             </div>
         </div>

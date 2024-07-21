@@ -2,43 +2,80 @@
 import Image from 'next/image';
 import { Fade } from "react-awesome-reveal";
 import Link from 'next/link';
-import BannerImage from '../../Assets/png-home-1.png';
+import BannerImage from '../../Assets/pujaevent.jpg';
+import { Box, Typography, Button, Grid, Container } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
+// Styled component for responsive image container
+const FixedImage = styled(Box)(({ theme }) => ({
+    width: '100%',
+    height: 400, // Default height for larger screens
+    position: 'relative',
+    overflow: 'hidden',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop:60,
+    [theme.breakpoints.down('sm')]: {
+        height: 300, // Height for smaller screens
+    }
+}));
 
 const Banner = () => {
-
     return (
-        <div id="home-section" className='bg-lightpink'>
-            <div className="mx-auto max-w-7xl pt-20 sm:pb-24 px-6">
-
-                <div className='grid grid-cols-1 lg:grid-cols-12 space-x-1'>
-
-                    <div className='col-span-6 flex flex-col justify-center' style={{marginTop:8}}>
+        <Box id="home-section" sx={{ backgroundColor: 'lightpink', py: { xs: 8, sm: 12 } }}>
+            <Container maxWidth="lg">
+                <Grid container spacing={2} alignItems="center">
+                    <Grid item xs={12} md={6} mt={10}>
                         <Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
-                            <h1 className="text-4xl lg:text-7xl font-semibold mb-5 text-lightgrey md:4px lg:text-start text-center">
-                           
-                                Events And <br /> Management
-                            </h1>
+                            <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 3, color: 'green', textAlign: { xs: 'center', md: 'left' } }}>
+                                ॐ नमो गंगायै विश्वरुपिणी नारायणी नमो <br /> नम:।।
+                            </Typography>
                         </Fade>
                         <Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
-                            <p className='text-grey lg:text-lg font-normal mb-10 lg:text-start text-center'> We Help Simplify Your Event Management and Planning <br/> for Every Occasion Like Wedding & Party.</p>
+                            <Typography variant="body1" sx={{ color: 'grey', mb: 4, textAlign: { xs: 'center', md: 'left' } }}>
+                                गांगं वारि मनोहारि मुरारिचरणच्युतम् । <br />
+                                त्रिपुरारिशिरश्चारि पापहारि पुनातु माम् ॥
+                            </Typography>
                         </Fade>
                         <Fade direction={'up'} delay={1000} cascade damping={1e-1} triggerOnce={true}>
-                            <div className='md:flex align-middle justify-center lg:justify-start'>
-                                <button className='text-xl w-full md:w-auto font-medium rounded-full text-white py-5 px-6 bg-pink lg:px-14 mr-6'><Link href='#cook-section'>View All Projects </Link></button>
- 
-                            </div>
+                            <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+                                <Button variant="contained"
+        color="secondary"
+        component={Link}
+        href="#cook-section"
+        sx={{
+            py: 2,
+            px: 4,
+            fontWeight: 'medium',
+            borderRadius: '20px', // Adjust this value as needed for desired roundness
+            backgroundColor: 'secondary.main', // Ensure the button color matches your theme
+            boxShadow: 3, // Add shadow for a lifted effect
+            '&:hover': {
+                backgroundColor: 'secondary.dark', // Darker shade on hover
+                boxShadow: 6, // Enhance shadow on hover
+            },
+            transition: 'all 0.3s ease', // Smooth transition for hover effects
+        }}>
+                                    Book now 
+                                </Button>
+                            </Box>
                         </Fade>
-                    </div>
-
-                    <div className='col-span-6 flex justify-center relative'  style={{marginTop:20}}>
-                         
-                        <Image src={BannerImage} alt="nothing" width={1000} height={805} />
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+                    </Grid>
+                    <Grid item xs={12} md={6} sx={{ mt: { xs: 4, md: 0 } }}>
+                        <FixedImage>
+                            <Image 
+                                src={BannerImage} 
+                                alt="Banner Image" 
+                                 
+                            />
+                        </FixedImage>
+                    </Grid>
+                </Grid>
+            </Container>
+        </Box>
+    );
 }
 
 export default Banner;
+

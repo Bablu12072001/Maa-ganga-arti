@@ -3,6 +3,9 @@ import Features from './components/Work/index';
 import Cook from './components/Cook/index';
 import Expert from './components/Expert/index';
 import Gallery from './components/Gallery/index';
+import Booking from './components/Booking/Booking'
+import Client from "./components/Client/index"
+import Scrolling from "./components/Scrolling/scrollong"
  
 import Newsletter from './components/Newsletter/Newsletter';
  
@@ -14,10 +17,13 @@ export default function Home() {
     
     <main>
       <Banner />
+      <Scrolling/>
       <Features />
       <Cook />
       <Expert />
+      <Booking/>
       <Gallery />
+      <Client/>
       {/* <Newsletter /> */}
       </main>
       
