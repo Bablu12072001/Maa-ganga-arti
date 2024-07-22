@@ -6,6 +6,9 @@ import Gallery from './components/Gallery/index';
 import Booking from './components/Booking/Booking'
 import Client from "./components/Client/index"
 import Scrolling from "./components/Scrolling/scrollong"
+import BookEvent from "./components/BookEvent/index"
+import BookingCard from "./components/BookingCard/index"
+import AllGallery from "./components/All Gallery/index"
  
 import Newsletter from './components/Newsletter/Newsletter';
  
@@ -23,7 +26,10 @@ export default function Home() {
       <Expert />
       <Booking/>
       <Gallery />
-      <Client/>
+      <AllGallery/>
+      <Client />
+      <BookingCard/>
+      <BookEvent/>
       {/* <Newsletter /> */}
       </main>
       

@@ -5,10 +5,10 @@ import { Fade } from "react-awesome-reveal";
 import { Button } from '@mui/material';
  
 import { useRouter } from 'next/navigation';
-import image1 from "../../Assets/pujaevent.jpg"
-import image2 from "../../Assets/pujaevent.jpg"
-import image3 from "../../Assets/pujaevent.jpg"
-import image4 from "../../Assets/pujaevent.jpg"
+import image1 from "../../Assets/gangamaa.jpg"
+import image2 from "../../Assets/maaGanga.jpg"
+import image3 from "../../Assets/Arti image.jpg"
+import image4 from "../../Assets/Arti deepak.jpg"
 
 const Gallery = () => {
      

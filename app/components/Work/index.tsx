@@ -3,7 +3,7 @@ import Image from 'next/image';
  
 import { ChevronRightIcon } from '@heroicons/react/24/outline';
 import { Fade } from "react-awesome-reveal";
-import Pujaimage from "../../Assets/pujaevent.jpg"
+import Pujaimage from "../../Assets/gangamaa.jpg"
 
 interface cardDataType {
     imgSrc: string;

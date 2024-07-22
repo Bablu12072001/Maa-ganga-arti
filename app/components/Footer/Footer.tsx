@@ -38,7 +38,7 @@ const products: ProductType[] = [
     {
         id: 1,
         section: "Company",
-        link: ['About', 'Portfolio' ,'Careers',   'Blog', ],
+        link: ['Home', 'About us' ,    'Gallery','Services' ],
     },
     {
         id: 2,

@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import Image from 'next/image';
 import { Fade } from "react-awesome-reveal";
 import Link from 'next/link';
-import BannerImage from '../../Assets/pujaevent.jpg';
+import BannerImage from '../../Assets/maaGanga.jpg';
 import { Box, Typography, Button, Grid, Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { useEffect, useState } from 'react';
 
 // Styled component for responsive image container
 const FixedImage = styled(Box)(({ theme }) => ({
@@ -15,13 +16,24 @@ const FixedImage = styled(Box)(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop:60,
+    marginTop: 60,
     [theme.breakpoints.down('sm')]: {
         height: 300, // Height for smaller screens
     }
 }));
 
 const Banner = () => {
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
+    if (!isClient) {
+        // Optionally return null or a loading spinner while determining if it's client-side
+        return null;
+    }
+
     return (
         <Box id="home-section" sx={{ backgroundColor: 'lightpink', py: { xs: 8, sm: 12 } }}>
             <Container maxWidth="lg">
@@ -40,34 +52,36 @@ const Banner = () => {
                         </Fade>
                         <Fade direction={'up'} delay={1000} cascade damping={1e-1} triggerOnce={true}>
                             <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
-                                <Button variant="contained"
-        color="secondary"
-        component={Link}
-        href="#cook-section"
-        sx={{
-            py: 2,
-            px: 4,
-            fontWeight: 'medium',
-            borderRadius: '20px', // Adjust this value as needed for desired roundness
-            backgroundColor: 'secondary.main', // Ensure the button color matches your theme
-            boxShadow: 3, // Add shadow for a lifted effect
-            '&:hover': {
-                backgroundColor: 'secondary.dark', // Darker shade on hover
-                boxShadow: 6, // Enhance shadow on hover
-            },
-            transition: 'all 0.3s ease', // Smooth transition for hover effects
-        }}>
-                                    Book now 
-                                </Button>
+                                <Link href="/BookingCard" passHref>
+                                    <Button
+                                        variant="contained"
+                                        color="secondary"
+                                        sx={{
+                                            py: 2,
+                                            px: 4,
+                                            fontWeight: 'medium',
+                                            borderRadius: '20px', // Adjust this value as needed for desired roundness
+                                            backgroundColor: 'secondary.main', // Ensure the button color matches your theme
+                                            boxShadow: 3, // Add shadow for a lifted effect
+                                            '&:hover': {
+                                                backgroundColor: 'secondary.dark', // Darker shade on hover
+                                                boxShadow: 6, // Enhance shadow on hover
+                                            },
+                                            transition: 'all 0.3s ease', // Smooth transition for hover effects
+                                        }}>
+                                        Book now
+                                    </Button>
+                                </Link>
                             </Box>
                         </Fade>
                     </Grid>
                     <Grid item xs={12} md={6} sx={{ mt: { xs: 4, md: 0 } }}>
                         <FixedImage>
-                            <Image 
-                                src={BannerImage} 
-                                alt="Banner Image" 
-                                 
+                            <Image
+                                src={BannerImage}
+                                alt="Banner Image"
+                                layout="fill" // Use layout fill for responsive images
+                                objectFit="cover" // Ensure the image covers the container
                             />
                         </FixedImage>
                     </Grid>
@@ -78,4 +92,3 @@ const Banner = () => {
 }
 
 export default Banner;
-

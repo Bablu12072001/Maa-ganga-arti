@@ -6,12 +6,12 @@ import { Fade } from "react-awesome-reveal";
 import 'slick-carousel/slick/slick.css';
 import Image, { StaticImageData } from "next/image";
 import 'slick-carousel/slick/slick-theme.css';
-import image1 from "../../Assets/png-home-1.png";
-import image2 from "../../Assets/png-home-1.png";
-import image3 from "../../Assets/png-home-1.png";
-import image4 from "../../Assets/png-home-1.png";
-import image6 from "../../Assets/png-home-1.png";
-import image5 from "../../Assets/png-home-1.png";
+import image1 from "../../Assets/profile photo.jpg";
+import image2 from "../../Assets/profile photo.jpg";
+import image3 from "../../Assets/profile photo.jpg";
+import image4 from "../../Assets/profile photo.jpg";
+import image6 from "../../Assets/profile photo.jpg";
+// import image5 from "../../Assets/png-home-1.png";
  
 
 // CAROUSEL DATA
@@ -42,11 +42,7 @@ const postData: DataType[] = [
         name: 'Shoo Thar Mien',
         imgSrc: image4,
     },
-    {
-        profession: 'profession',
-        name: 'Shoo Thar Mien',
-        imgSrc: image5,
-    },
+    
     {
         profession: 'profession',
         name: 'Shoo Thar Mien',

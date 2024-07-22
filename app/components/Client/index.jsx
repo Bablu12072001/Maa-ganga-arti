@@ -84,7 +84,7 @@ const OurClients = () => {
         <Typography variant="h4" component="h2" gutterBottom>
           Our Clients
         </Typography>
-        <Typography variant="h6" component="p">
+        <Typography variant="h6" component="p" color={"green"}>
           Hear what our clients have to say
         </Typography>
       </Box>
