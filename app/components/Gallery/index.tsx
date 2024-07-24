@@ -1,31 +1,25 @@
-// components/Gallery.jsx
+// components/Gallery/index.js
 "use client";
+import Link from 'next/link';
 import Image from 'next/image';
 import { Fade } from "react-awesome-reveal";
 import { Button } from '@mui/material';
- 
-import { useRouter } from 'next/navigation';
+
 import image1 from "../../Assets/gangamaa.jpg"
 import image2 from "../../Assets/maaGanga.jpg"
 import image3 from "../../Assets/Arti image.jpg"
 import image4 from "../../Assets/Arti deepak.jpg"
 
 const Gallery = () => {
-     
-    const router = useRouter();
-
     const images = [
-        { src: image1, alt: "pizza-one", width: 1000, height: 805 },
-        { src: image2, alt: "pizza-two", width: 700, height: 405 },
-        { src: image3, alt: "pizza-three", width: 500, height: 405 },
-        { src: image4, alt: "pizza-four", width: 500, height: 405 },
-        // Add more images as needed
+        { src: image1, alt: "image-one", width: 1000, height: 805 },
+        { src: image2, alt: "image-two", width: 700, height: 405 },
+        { src: image3, alt: "image-three", width: 500, height: 405 },
+        { src: image4, alt: "image-four", width: 500, height: 405 },
     ];
-    const handleViewMore = () => {
-        router.push('/full-gallery');  // Corrected route to full gallery page
-    };
+
     return (
-        <div id="gallery-section"  >
+        <div id="gallery-section">
             <div className='mx-auto max-w-2xl lg:max-w-7xl sm:py-4 lg:px-8 mt-20 md:pt-24'>
                 <div className="text-center">
                     <Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
@@ -40,19 +34,19 @@ const Gallery = () => {
 
                 <div className='grid grid-cols-1 md:grid-cols-12 my-16 sm:space-x-6 space-y-6 md:space-y-0 px-6'>
                     <div className='col-span-6 flex justify-center overflow-hidden rounded-3xl'>
-                        <Image src={images[0].src} alt={images[0].alt} width={images[0].width} height={images[0].height} className="inner-img"/>
+                        <Image src={images[0].src} alt={images[0].alt} width={images[0].width} height={images[0].height} className="inner-img" />
                     </div>
                     <div className='col-span-6 flex justify-center'>
                         <div className="grid grid-rows-1 grid-flow-row gap-4">
                             <div className="row-span-1 overflow-hidden rounded-3xl">
-                                <Image src={images[1].src} alt={images[1].alt} width={images[1].width} height={images[1].height} className="inner-img"/>
+                                <Image src={images[1].src} alt={images[1].alt} width={images[1].width} height={images[1].height} className="inner-img" />
                             </div>
                             <div className='grid grid-cols-2 gap-2'>
                                 <div className='overflow-hidden rounded-3xl'>
-                                    <Image src={images[2].src} alt={images[2].alt} width={images[2].width} height={images[2].height} className="inner-img"/>
+                                    <Image src={images[2].src} alt={images[2].alt} width={images[2].width} height={images[2].height} className="inner-img" />
                                 </div>
                                 <div className='overflow-hidden rounded-3xl'>
-                                    <Image src={images[3].src} alt={images[3].alt} width={images[3].width} height={images[3].height} className="inner-img"/>
+                                    <Image src={images[3].src} alt={images[3].alt} width={images[3].width} height={images[3].height} className="inner-img" />
                                 </div>
                             </div>
                         </div>
@@ -60,24 +54,23 @@ const Gallery = () => {
                 </div>
 
                 <div className="text-center mt-8">
-                    
-                    <Button
-                        onClick={handleViewMore}
-                                                type="submit"
-                                                variant="contained"
-                                                sx={{
-                                                    backgroundColor: 'green !important',
-                                                    '&:hover': {
-                                                        backgroundColor: 'darkgreen !important'
-                                                    }
-                                                }}
-                                            >
-                                                 View More
-                                            </Button>
+                    <Link href="/allGallery" passHref>
+                        <Button
+                            variant="contained"
+                            sx={{
+                                backgroundColor: 'green !important',
+                                '&:hover': {
+                                    backgroundColor: 'darkgreen !important'
+                                }
+                            }}
+                        >
+                            View More
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Gallery;

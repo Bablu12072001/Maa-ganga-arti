@@ -8,7 +8,8 @@ import Client from "./components/Client/index"
 import Scrolling from "./components/Scrolling/scrollong"
 import BookEvent from "./components/BookEvent/index"
 import BookingCard from "./components/BookingCard/index"
-import AllGallery from "./components/All Gallery/index"
+import AllGallery from "./components/allGallery/index"
+ 
  
 import Newsletter from './components/Newsletter/Newsletter';
  

@@ -63,7 +63,7 @@ const footer = () => {
 
                 <div className='sm:col-span-6 lg:col-span-5'>
                     <div className="flex flex-shrink-0 items-center border-right">
-                        <Image src={Logo} alt="logo" width={56} height={56} />
+                        {/* <Image src={Logo} alt="logo" width={56} height={56} /> */}
                         <Link href="/" className='text-2xl font-semibold text-black ml-4'>
                             Maa Ganag Arti
                         </Link>

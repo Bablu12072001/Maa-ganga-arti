@@ -1,7 +1,8 @@
 "use client";
 import Image from 'next/image';
+
+import { useRouter } from 'next/navigation';
 import { Fade } from "react-awesome-reveal";
-import Link from 'next/link';
 import BannerImage from '../../Assets/maaGanga.jpg';
 import { Box, Typography, Button, Grid, Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -24,10 +25,24 @@ const FixedImage = styled(Box)(({ theme }) => ({
 
 const Banner = () => {
     const [isClient, setIsClient] = useState(false);
+    const [routerReady, setRouterReady] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
         setIsClient(true);
     }, []);
+
+    useEffect(() => {
+        if (isClient) {
+            setRouterReady(true);
+        }
+    }, [isClient]);
+
+    const handleBookNowClick = () => {
+        if (routerReady) {
+            router.push('/BookingCard');
+        }
+    };
 
     if (!isClient) {
         // Optionally return null or a loading spinner while determining if it's client-side
@@ -52,26 +67,26 @@ const Banner = () => {
                         </Fade>
                         <Fade direction={'up'} delay={1000} cascade damping={1e-1} triggerOnce={true}>
                             <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
-                                <Link href="/BookingCard" passHref>
-                                    <Button
-                                        variant="contained"
-                                        color="secondary"
-                                        sx={{
-                                            py: 2,
-                                            px: 4,
-                                            fontWeight: 'medium',
-                                            borderRadius: '20px', // Adjust this value as needed for desired roundness
-                                            backgroundColor: 'secondary.main', // Ensure the button color matches your theme
-                                            boxShadow: 3, // Add shadow for a lifted effect
-                                            '&:hover': {
-                                                backgroundColor: 'secondary.dark', // Darker shade on hover
-                                                boxShadow: 6, // Enhance shadow on hover
-                                            },
-                                            transition: 'all 0.3s ease', // Smooth transition for hover effects
-                                        }}>
-                                        Book now
-                                    </Button>
-                                </Link>
+                                <Button
+                                    variant="contained"
+                                    color="secondary"
+                                    sx={{
+                                        py: 2,
+                                        px: 4,
+                                        fontWeight: 'medium',
+                                        borderRadius: '20px', // Adjust this value as needed for desired roundness
+                                        backgroundColor: 'secondary.main', // Ensure the button color matches your theme
+                                        boxShadow: 3, // Add shadow for a lifted effect
+                                        '&:hover': {
+                                            backgroundColor: 'secondary.dark', // Darker shade on hover
+                                            boxShadow: 6, // Enhance shadow on hover
+                                        },
+                                        transition: 'all 0.3s ease', // Smooth transition for hover effects
+                                    }}
+                                    onClick={handleBookNowClick}
+                                >
+                                    Book now
+                                </Button>
                             </Box>
                         </Fade>
                     </Grid>
