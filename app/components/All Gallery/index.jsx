@@ -20,6 +20,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
+import { FC } from "react";
 
 const extractYouTubeID = (url) => {
   const urlObj = new URL(url);
