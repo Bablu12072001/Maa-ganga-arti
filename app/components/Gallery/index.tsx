@@ -63,7 +63,7 @@ const Gallery: React.FC = () => {
           </div>
         </div>
 
-        <div className="text-center mt-8">
+        <div className="text-center mt-8" >
           <Button
             onClick={handleRedirect}
             variant="contained"
