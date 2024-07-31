@@ -15,12 +15,14 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+
 import CloseIcon from "@mui/icons-material/Close";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import { FC } from "react";
+import Image from "next/image";
 
 const extractYouTubeID = (url) => {
   const urlObj = new URL(url);
@@ -261,7 +263,7 @@ const Gallery = () => {
                 title="Selected Video"
               />
             ) : (
-              <img
+              <Image
                 src={selectedMedia.src}
                 alt="Selected"
                 style={{

@@ -73,7 +73,7 @@ const ClientCard = ({ client }) => {
           {client.profession}
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
-          "{client.message}"
+          {client.message}
         </Typography>
       </CardContent>
     </Card>
