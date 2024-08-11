@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import { useRouter } from 'next/navigation';
 import { Fade } from "react-awesome-reveal";
-import BannerImage from '../../Assets/maaGanga.jpg';
+import BannerImage from '../../Assets/Temple.jpeg';
 import { Box, Typography, Button, Grid, Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
@@ -50,7 +50,7 @@ const Banner = () => {
     }
 
     return (
-        <Box id="home-section" sx={{ backgroundColor: 'lightpink', py: { xs: 8, sm: 12 } }}>
+        <Box id="home-section" sx={{ backgroundColor: 'lightblue', py: { xs: 8, sm: 12 } }}>
             <Container maxWidth="lg">
                 <Grid container spacing={2} alignItems="center">
                     <Grid item xs={12} md={6} mt={10}>

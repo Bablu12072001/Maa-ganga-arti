@@ -6,7 +6,7 @@ import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
 import Signindialog from './Signindialog';
 import Image from 'next/image';
-import logo from '../../Assets/Puja.png';
+import logo from '../../Assets/logo ganga arti.png';
 
 interface NavigationItem {
     name: string;
@@ -39,9 +39,9 @@ const Navbar = () => {
                             <div className="flex items-center justify-between w-full">
                                 {/* LOGO */}
                                 <div className="flex items-center">
-                                    {/* <Image src={logo} alt="logo" width={48} height={48} /> */}
+                                    <Image src={logo} alt="logo" width={48} height={48} />
                                     <Link href="/" className="text-xl sm:text-2xl font-semibold text-gray-800 ml-3">
-                                        Maa Ganga Arti
+                                        Shree Narayan Ganga Aarti
                                     </Link>
                                 </div>
                                 {/* LINKS */}

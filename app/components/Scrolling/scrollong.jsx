@@ -19,7 +19,7 @@ const ScrollingText = styled(Box)(({ theme }) => ({
   whiteSpace: "nowrap",
   overflow: "hidden",
   position: "relative",
-  animation: `${scrollLeftToRight} 30s linear infinite`,
+  animation: `${scrollLeftToRight} 40s linear infinite`,
   width: "400%", // Make the width twice the container width
   display: "flex",
   alignItems: "center",
@@ -48,15 +48,8 @@ const ScrollPage = () => {
       >
         <ScrollingText>
           <Typography variant="h6" component="div">
-            ॐ जय गंगे माता, श्री जय गंगे माता । जो नर तुमको ध्याता, मनवांछित फल
-            पाता ॥ चंद्र सी जोत तुम्हारी, जल निर्मल आता । शरण पडें जो तेरी, सो
-            नर तर जाता ॥ ॥ॐ जय गंगे माता..॥ पुत्र सगर के तारे, सब जग को ज्ञाता ।
-            कृपा दृष्टि तुम्हारी, त्रिभुवन सुख दाता ॥ ॥ ॐ जय गंगे माता..॥ एक ही
-            बार जो तेरी, शारणागति आता । यम की त्रास मिटा कर, परमगति पाता ॥ ॥ॐ जय
-            गंगे माता..॥ आरती मात तुम्हारी, जो जन नित्य गाता । दास वही सहज में,
-            मुक्त्ति को पाता ॥ ॥ ॐ जय गंगे माता..॥ ॐ जय गंगे माता, श्री जय गंगे
-            माता । जो नर तुमको ध्याता, मनवांछित फल पाता ॥ ॐ जय गंगे माता, श्री
-            जय गंगे माता ।
+            Helpline no : 7079362685| For booking query call : 7870406788,
+            8340116521 (08:00 Am to 10:00 PM) Whats app number : 7870406788|
           </Typography>
         </ScrollingText>
       </Box>

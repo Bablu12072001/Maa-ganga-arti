@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../Assets/Puja.png"
+import Logo from "../../Assets/logo ganga arti.png"
 
 
 interface ProductType {
@@ -18,7 +18,7 @@ interface socialLinks {
 const socialLinks: socialLinks[] = [
     {
         imgSrc: '/images/Footer/facebook.svg',
-        link: 'https://facebook.com',
+        link: 'https://www.facebook.com/profile.php?id=61561410114750',
         width: 10
     },
     {
@@ -28,7 +28,7 @@ const socialLinks: socialLinks[] = [
     },
     {
         imgSrc: '/images/Footer/twitter.svg',
-        link: 'https://twitter.com',
+        link: 'https://x.com/thegangaarti?t=pcdO-QOZUIq982OK9p56yw&s=09',
         width: 14
     },
 
@@ -63,9 +63,9 @@ const footer = () => {
 
                 <div className='sm:col-span-6 lg:col-span-5'>
                     <div className="flex flex-shrink-0 items-center border-right">
-                        {/* <Image src={Logo} alt="logo" width={56} height={56} /> */}
+                        <Image src={Logo} alt="logo" width={56} height={56} />
                         <Link href="/" className='text-2xl font-semibold text-black ml-4'>
-                            Maa Ganag Arti
+                            Shree Narayan Ganga Aarti
                         </Link>
                     </div>
                     <h3 className='text-textbl text-xs font-medium mt-5 mb-4 lg:mb-16'>The spiritual atmosphere during the aarti is enhanced <br /> by the glow of oil lamps and the fragrance of incens</h3>
